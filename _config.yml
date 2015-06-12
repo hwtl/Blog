@@ -3,16 +3,21 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+#站点名，站点左上角
+title: xiaoweige's blog
+#副标题，站点左上角
+subtitle: 学会沉淀，总会有所收获！
+#给搜索引擎看的，对站点的描述，可以自定义
+description: 小伟哥随笔
+#在站点左下角可以看到
+author: Jerry.hu
+#语言选择，用中文
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://xiaoweige.info
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -27,7 +32,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
-# Writing
+# Writing 文章布局、写作格式的定义，不修改
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
@@ -37,11 +42,13 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
+#代码高亮的开关需要在主题里面配置
 highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace:
+  tab_replace: false
 
 # Category & Tag
 default_category: uncategorized
@@ -63,8 +70,15 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+theme: coney
+#theme: dream
 
+#sitemap
+sitemap:
+  path: sitemap.xml
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
